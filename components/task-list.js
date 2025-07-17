@@ -1,5 +1,5 @@
 import TaskItem from "./task-item"
-
+import '../styles/components/task-list.css';
 export default function TaskList({ tasks, onToggleComplete, onDeleteTask }) {
   const pendingTasks = tasks.filter((task) => !task.completed)
   const completedTasks = tasks.filter((task) => task.completed)

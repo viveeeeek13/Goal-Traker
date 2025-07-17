@@ -1,0 +1,28 @@
+/* Goal List Styles */
+.task-list-container {
+    margin-bottom: 30px;
+  }
+  
+  .task-list-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .task-list-container h3 {
+    color: var(--secondary-color);
+    margin: 20px 0 10px;
+    font-size: 1.2rem;
+  }
+  
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .empty-message {
+    color: var(--medium-gray);
+    font-style: italic;
+    padding: 10px;
+  }
+  

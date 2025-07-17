@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-
+import '../../styles/pages/authentication-pages.css';
 export default function RegisterPage() {
   const [formData, setFormData] = useState({
     name: "",

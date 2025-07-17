@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react"
 import Header from "./header"
-
 export default function DashboardWrapper({ children }) {
   const [user, setUser] = useState(null)
   const [isLoading, setIsLoading] = useState(true)

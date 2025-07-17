@@ -1,5 +1,6 @@
 "use client"
 
+import '../styles/components/task-item.css';
 
 export default function TaskItem({ task, onToggleComplete, onDeleteTask }) {
   const formatDate = (dateString) => {

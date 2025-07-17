@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import TaskForm from "../task-form"
 import TaskList from "../task-list"
-
+import '../../styles/pages/task-page.css';
 
 export default function TasksPage() {
   const [tasks, setTasks] = useState([])
@@ -19,26 +19,8 @@ export default function TasksPage() {
       const savedTasks = window.localStorage.getItem("goaltracker_goals")
       if (savedTasks) {
         setTasks(JSON.parse(savedTasks))
-      } else { 
-        const defaultTasks = [
-          { id: 1, title: "Complete Online Course", course: "Education", dueDate: "2024-06-15", completed: false },
-          {
-            id: 2,
-            title: "Read 2 Books This Month",
-            course: "Personal Development",
-            dueDate: "2024-06-10",
-            completed: true,
-          },
-          {
-            id: 3,
-            title: "Practice Public Speaking",
-            course: "Health & Fitness",
-            dueDate: "2024-06-20",
-            completed: false,
-          },
-        ]
-        setTasks(defaultTasks)
-        saveTasks(defaultTasks)
+      } else {
+        setTasks([])
       }
     } catch (error) {
       console.error("Error loading tasks:", error)
@@ -52,13 +34,7 @@ export default function TasksPage() {
       if (savedCourses) {
         setCourses(JSON.parse(savedCourses))
       } else {
-        const defaultCourses = [
-          { id: 1, name: "Education", code: "EDU101", instructor: "Various", color: "#4a6fa5" },
-          { id: 2, name: "Personal Development", code: "PD202", instructor: "Various", color: "#66bb6a" },
-          { id: 3, name: "Health & Fitness", code: "HF110", instructor: "Various", color: "#ef5350" },
-        ]
-        setCourses(defaultCourses)
-        saveCourses(defaultCourses)
+        setCourses([])
       }
     } catch (error) {
       console.error("Error loading courses:", error)
@@ -116,4 +92,3 @@ export default function TasksPage() {
     </div>
   )
 }
-

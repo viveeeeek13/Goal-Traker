@@ -1,6 +1,7 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
+import '../../styles/components/courses-page.css';
 
 
 export default function CoursesPage() {
@@ -18,36 +19,6 @@ export default function CoursesPage() {
   useEffect(() => {
     loadCategories()
     loadTasks()
-
-    const exampleTasks = [
-      {
-        id: Date.now(),
-        title: "Finish goal planning sheet",
-        course: "Personal",
-        dueDate: new Date().toISOString(),
-        completed: false
-      },
-      {
-        id: Date.now() + 1,
-        title: "Submit report to boss",
-        course: "Work",
-        dueDate: new Date().toISOString(),
-        completed: false
-      },
-      {
-        id: Date.now() + 2,
-        title: "Daily workout",
-        course: "Health",
-        dueDate: new Date().toISOString(),
-        completed: true
-      }
-    ]
-
-    const savedTasks = window.localStorage.getItem("goaltracker_goals")
-    if (!savedTasks || JSON.parse(savedTasks).length === 0) {
-      window.localStorage.setItem("goaltracker_goals", JSON.stringify(exampleTasks))
-      setTasks(exampleTasks)
-    }
   }, [])
 
   const loadCategories = () => {
@@ -56,13 +27,7 @@ export default function CoursesPage() {
       if (savedCategories) {
         setCategories(JSON.parse(savedCategories))
       } else {
-        const defaultCategories = [
-          { id: 1, name: "Personal", code: "PERS", instructor: "Self", color: "#4a6fa5" },
-          { id: 2, name: "Work", code: "WORK", instructor: "Boss", color: "#66bb6a" },
-          { id: 3, name: "Health", code: "HLTH", instructor: "Doctor", color: "#ef5350" },
-        ]
-        setCategories(defaultCategories)
-        saveCategories(defaultCategories)
+        setCategories([])
       }
     } catch (error) {
       console.error("Error loading categories:", error)
@@ -75,6 +40,8 @@ export default function CoursesPage() {
       const savedTasks = window.localStorage.getItem("goaltracker_goals")
       if (savedTasks) {
         setTasks(JSON.parse(savedTasks))
+      } else {
+        setTasks([])
       }
     } catch (error) {
       console.error("Error loading tasks:", error)
@@ -267,35 +234,6 @@ export default function CoursesPage() {
           })}
         </div>
       </div>
-      <style jsx>{`
-        .courses-grid {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 1.5rem;
-          background: #f0f6ff;
-          border-radius: 12px;
-          padding: 2rem;
-          margin: 2rem 0;
-        }
-        .course-card {
-          background: #fff;
-          border: 2px solid #2563eb;
-          border-radius: 10px;
-          padding: 1.2rem;
-          color: #0a2a66;
-          min-width: 220px;
-          box-shadow: 0 1px 4px rgba(0,0,255,0.06);
-          transition: box-shadow 0.2s;
-        }
-        .course-card.selected {
-          box-shadow: 0 4px 16px rgba(37,99,235,0.15);
-          border-color: #1d4ed8;
-        }
-        .course-header h3 {
-          color: #2563eb;
-          margin-bottom: 0.2rem;
-        }
-      `}</style>
     </div>
   )
 }

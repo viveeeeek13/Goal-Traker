@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import '../styles/components/header.css';
 
 export default function Header({ user }) {
   const [currentPath, setCurrentPath] = useState("")

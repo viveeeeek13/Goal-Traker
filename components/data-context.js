@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import '../styles/components/data-context.css';
 
 let globalState = {
   tasks: [],

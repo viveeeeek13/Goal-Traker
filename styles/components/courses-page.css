@@ -1,0 +1,137 @@
+/* Courses Page - Blue & White Theme */
+
+.courses-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.06);
+  padding: 2rem 2.5rem;
+}
+
+.courses-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.courses-header h2 {
+  color: #2563eb;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+.add-button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.add-button:hover {
+  background: #1d4ed8;
+}
+
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.course-card {
+  background: #f8fafc;
+  border: 2px solid #2563eb;
+  border-radius: 10px;
+  padding: 1.2rem 1.1rem;
+  color: #0a2a66;
+  min-width: 220px;
+  box-shadow: 0 1px 4px rgba(37,99,235,0.06);
+  transition: box-shadow 0.2s, border-color 0.2s;
+  flex: 1 1 250px;
+  cursor: pointer;
+}
+.course-card.selected {
+  box-shadow: 0 4px 16px rgba(37,99,235,0.15);
+  border-color: #1d4ed8;
+  background: #e0e7ff;
+}
+.course-header h3 {
+  color: #2563eb;
+  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.course-code {
+  color: #60a5fa;
+  font-size: 0.95rem;
+  margin-left: 0.5rem;
+}
+.course-details {
+  margin-top: 0.7rem;
+}
+.course-stats {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+.stat {
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  box-shadow: 0 1px 3px rgba(37,99,235,0.04);
+  text-align: center;
+}
+.stat-value {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.stat-label {
+  color: #64748b;
+  font-size: 0.92rem;
+}
+.course-form-container {
+  background: #e0e7ff;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.course-form label {
+  color: #2563eb;
+  font-weight: 600;
+}
+.course-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #f1f5f9;
+  margin-bottom: 0.7rem;
+}
+.course-task-list {
+  margin: 0.7rem 0 0 0;
+  padding: 0 0 0 1.2rem;
+}
+.course-task-list li {
+  color: #222;
+  margin-bottom: 0.3rem;
+}
+.course-task-list li.completed {
+  color: #60a5fa;
+  text-decoration: line-through;
+}
+.task-due-date {
+  color: #64748b;
+  font-size: 0.92rem;
+  margin-left: 0.5rem;
+}
+.empty-message {
+  color: #64748b;
+  font-style: italic;
+  margin: 0.5rem 0;
+} 

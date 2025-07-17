@@ -1,0 +1,129 @@
+/* Categories Styles */
+.courses-container {
+    margin-bottom: 30px;
+  }
+  
+  .courses-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .course-form-container {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+  }
+  
+  .course-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .course-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-card.selected {
+    box-shadow: 0 0 0 2px var(--accent-color);
+  }
+  
+  .course-header {
+    padding: 15px;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  
+  .course-header h3 {
+    margin: 0;
+    color: var(--text-color);
+  }
+  
+  .course-code {
+    display: inline-block;
+    background-color: var(--background-color);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+  
+  .course-details {
+    padding: 15px;
+  }
+  
+  .course-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--medium-gray);
+  }
+  
+  .course-tasks {
+    padding: 15px;
+    border-top: 1px solid var(--light-gray);
+    background-color: var(--background-color);
+  }
+  
+  .course-task-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+  }
+  
+  .course-task-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--light-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .course-task-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .course-task-list li.completed {
+    text-decoration: line-through;
+    color: var(--medium-gray);
+  }
+  
+  .task-due-date {
+    font-size: 0.8rem;
+    color: var(--medium-gray);
+  }
+  

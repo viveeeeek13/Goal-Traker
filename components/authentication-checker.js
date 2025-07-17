@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import LoginPage from "./pages/login-page"
+import '../styles/pages/authentication-pages.css';
 export default function AuthChecker() {
   const [isLoading, setIsLoading] = useState(true)
   const [isLoggedIn, setIsLoggedIn] = useState(false)

@@ -1,0 +1,104 @@
+/* Goal Item Styles */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .task-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .task-item.completed {
+    background-color: #f9f9f9;
+    opacity: 0.8;
+  }
+  
+  .task-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .task-checkbox {
+    margin-right: 15px;
+  }
+  
+  .task-checkbox input[type="checkbox"] {
+    display: none;
+  }
+  
+  .checkbox-label {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .task-checkbox input[type="checkbox"]:checked + .checkbox-label::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  .task-details {
+    flex: 1;
+  }
+  
+  .task-title {
+    margin: 0 0 5px;
+    font-size: 1.1rem;
+  }
+  
+  .task-item.completed .task-title {
+    text-decoration: line-through;
+    color: var(--medium-gray);
+  }
+  
+  .task-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+  }
+  
+  .task-course {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+  }
+  
+  .delete-button {
+    background-color: transparent;
+    border: none;
+    color: var(--danger-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-button:hover {
+    background-color: rgba(239, 83, 80, 0.1);
+  }
+  

@@ -1,8 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
-
 export default function LoginPage() {
   const [formData, setFormData] = useState({
     email: "",
@@ -17,10 +16,10 @@ export default function LoginPage() {
       if (users.length === 0) {
         const demoUser = {
           id: 1,
-          name: "Goal Tracker Demo",
-          email: "demo@goaltracker.com",
-          password: "demo123",
-          userId: "DEMO001",
+          name: "Goal Tracker Temporary User",
+          email: "vivekkumarraj0079@gmail.com",
+          password: "qwerty12345@#",
+          userId: "TEMP001",
           focusArea: "Personal Development",
           experienceLevel: "Intermediate",
           avatar: "/placeholder.svg?height=100&width=100",
@@ -33,9 +32,9 @@ export default function LoginPage() {
     }
   }
 
-  useState(() => {
+  useEffect(() => {
     initializeDemoUser()
-  })
+  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -135,16 +134,16 @@ export default function LoginPage() {
         </div>
 
         <div className="demo-credentials">
-          <h4>Demo Credentials:</h4>
-          <p>Email: demo@goaltracker.com</p>
-          <p>Password: demo123</p>
+          <h4>Temporary Account Credentials:</h4>
+          <p>Email: vivekkumarraj0079@gmail.com</p>
+          <p>Password: qwerty12345@#</p>
           <button
             type="button"
             className="demo-button"
             onClick={() => {
               setFormData({
-                email: "demo@goaltracker.com",
-                password: "demo123",
+                email: "vivekkumarraj0079@gmail.com",
+                password: "qwerty12345@#",
               })
             }}
           >

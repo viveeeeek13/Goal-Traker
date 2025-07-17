@@ -1,0 +1,90 @@
+/* Header Component Styles - Blue & White Theme */
+
+.header {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #2563eb;
+  letter-spacing: 1px;
+}
+.logo .tagline {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #60a5fa;
+  font-weight: 500;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.nav a {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+  font-size: 1.05rem;
+}
+.nav a.active,
+.nav a:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2563eb;
+  background: #e0e7ff;
+}
+.user-name {
+  font-size: 1.05rem;
+  color: #2563eb;
+  font-weight: 600;
+}
+.logout-button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  box-shadow: 0 1px 4px rgba(37,99,235,0.07);
+}
+.logout-button:hover {
+  background: #1d4ed8;
+}
+  

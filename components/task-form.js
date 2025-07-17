@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import '../styles/components/task-form.css';
 
 export default function TaskForm({ onAddTask, courses = [] }) {
 
