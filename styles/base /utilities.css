@@ -1,4 +1,4 @@
-/* Utility classes */
+
 .text-center {
     text-align: center;
   }
@@ -34,8 +34,6 @@
   .mb-5 {
     margin-bottom: 3rem;
   }
-  
-  /* Dashboard specific styles */
   .dashboard-container {
     max-width: 1200px;
     margin: 0 auto;

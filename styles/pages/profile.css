@@ -1,4 +1,3 @@
-/* Profile Styles */
 .profile-container {
     margin-bottom: 30px;
   }
@@ -172,6 +171,6 @@
   }
   
   .upcoming-task-due {
-    color: var(--medium-gray);
+    color: gray;
   }
   

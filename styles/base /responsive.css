@@ -1,74 +1,167 @@
-/* Responsive styles */
+
+/* Extra small devices (phones, less than 480px) */
 @media (max-width: 768px) {
-    /* Header responsive */
-    .header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .nav {
-      margin-top: 15px;
-      width: 100%;
-    }
-  
-    .nav ul {
-      justify-content: space-between;
-      width: 100%;
-    }
-  
-    .nav li {
-      margin-left: 0;
-    }
-  
-    /* User menu responsive */
-    .user-menu {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .user-info {
-      order: 2;
-    }
-  
-    .logout-button {
-      order: 1;
-    }
-  
-    /* Task form responsive */
-    .task-form {
-      grid-template-columns: 1fr;
-    }
-  
-    /* Task meta responsive */
-    .task-meta {
-      flex-direction: column;
-      gap: 5px;
-    }
-  
-    /* Course form responsive */
-    .course-form {
-      grid-template-columns: 1fr;
-    }
-  
-    /* Profile responsive */
-    .profile-content {
-      grid-template-columns: 1fr;
-    }
-  
-    .stats-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    /* Auth responsive */
-    .auth-container {
-      padding: 10px;
-    }
-  
-    .auth-card {
-      padding: 30px 20px;
-    }
-  
-    .form-row {
-      grid-template-columns: 1fr;
-    }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
   }
+  .auth-card, .register-card {
+    padding: 16px 6px;
+    max-width: 98vw;
+  }
+  .auth-header h1 {
+    font-size: 1.5rem;
+  }
+  .form-row, .auth-form, .course-form {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+    gap: 10px;
+  }
+  .courses-grid {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+    gap: 10px;
+  }
+  .profile-content {
+    grid-template-columns: 1fr !important;
+  }
+  .stats-container {
+    grid-template-columns: 1fr !important;
+  }
+  .task-form {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Small to medium devices (tablets, 481px to 1024px) */
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav {
+    margin-top: 15px;
+    width: 100%;
+  }
+  .nav ul {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .nav li {
+    margin-left: 0;
+  }
+  .user-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .user-info {
+    order: 2;
+  }
+  .logout-button {
+    order: 1;
+  }
+  .task-form {
+    grid-template-columns: 1fr;
+  }
+  .task-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .course-form {
+    grid-template-columns: 1fr;
+  }
+  .profile-content {
+    grid-template-columns: 1fr;
+  }
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .auth-container {
+    padding: 10px;
+  }
+  .auth-card {
+    padding: 30px 20px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .courses-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+
+/* Large screens (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .main-content, .courses-container, .task-manager {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem 3rem;
+  }
+  .courses-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .profile-content {
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+  .stats-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Existing 768px breakpoint (keep for mid-size devices) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav {
+    margin-top: 15px;
+    width: 100%;
+  }
+  .nav ul {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .nav li {
+    margin-left: 0;
+  }
+  .user-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .user-info {
+    order: 2;
+  }
+  .logout-button {
+    order: 1;
+  }
+  .task-form {
+    grid-template-columns: 1fr;
+  }
+  .task-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .course-form {
+    grid-template-columns: 1fr;
+  }
+  .profile-content {
+    grid-template-columns: 1fr;
+  }
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .auth-container {
+    padding: 10px;
+  }
+  .auth-card {
+    padding: 30px 20px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,9 +1,8 @@
-/* Goal Manager Container */
 .task-manager {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
+    background-color: rgb(188, 19, 19);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
   }
