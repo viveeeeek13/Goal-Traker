@@ -2,8 +2,8 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgb(188, 19, 19);
-    border-radius: var(--border-radius);
+    background-color: #e6f1ae;
+    border-radius: 20px;
     box-shadow: var(--box-shadow);
   }
   
